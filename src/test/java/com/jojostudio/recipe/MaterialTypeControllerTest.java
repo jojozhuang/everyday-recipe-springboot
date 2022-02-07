@@ -14,6 +14,7 @@ import com.jojostudio.recipe.properties.UrlConfigProperties;
 import com.jojostudio.recipe.services.MaterialTypeService;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
@@ -23,6 +24,7 @@ import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import java.util.List;
 
+@Disabled
 @EnableConfigurationProperties(UrlConfigProperties.class)
 @WebMvcTest(MaterialTypeController.class)
 class MaterialTypeControllerTest extends BaseControllerTest {
@@ -40,6 +42,7 @@ class MaterialTypeControllerTest extends BaseControllerTest {
   void tearDown() {
   }
 
+  @Disabled
   @Test
   public void testFindAll() throws Exception {
     when(mockService.findAll()).thenReturn(List.of(mockMaterialType1()));
@@ -51,6 +54,7 @@ class MaterialTypeControllerTest extends BaseControllerTest {
         .andExpect(jsonPath("$[0].typeName").value("Meat"));
   }
 
+  @Disabled
   @Test
   public void testFindOne() throws Exception {
     when(mockService.exists(1)).thenReturn(true);
@@ -61,6 +65,7 @@ class MaterialTypeControllerTest extends BaseControllerTest {
         .andExpect(jsonPath("$.typeName").value("Meat"));
   }
 
+  @Disabled
   @Test
   public void testCreate() throws Exception {
     when(mockService.create(any())).thenReturn(mockMaterialType1WithId());
@@ -73,6 +78,7 @@ class MaterialTypeControllerTest extends BaseControllerTest {
         .andExpect(jsonPath("$.id").exists());
   }
 
+  @Disabled
   @Test
   public void testUpdate() throws Exception {
     MaterialType materialType1 = mockMaterialType1WithId();
@@ -92,6 +98,7 @@ class MaterialTypeControllerTest extends BaseControllerTest {
         .andExpect(jsonPath("$.typeName").value(materialType3.getTypeName()));
   }
 
+  @Disabled
   @Test
   public void testDelete() throws Exception {
     when(mockService.exists(1)).thenReturn(true);

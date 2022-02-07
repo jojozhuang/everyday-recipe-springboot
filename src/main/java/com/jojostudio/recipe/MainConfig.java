@@ -7,14 +7,14 @@ import org.springframework.util.StringUtils;
 import java.net.URI;
 import java.net.URISyntaxException;
 
-@Configuration
+//@Configuration
 public class MainConfig {
   @Bean
   public BasicDataSource dataSource() throws URISyntaxException {
     String databaseUrl = System.getenv("DATABASE_URL");
     if (!StringUtils.hasText(databaseUrl)) {
       BasicDataSource basicDataSource = new BasicDataSource();
-      basicDataSource.setUrl("jdbc:h2:mem:gamestore");
+      basicDataSource.setUrl("jdbc:h2:mem:recipe");
       basicDataSource.setUsername("sa");
       basicDataSource.setPassword("abc123");
 
