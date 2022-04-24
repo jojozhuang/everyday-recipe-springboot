@@ -2,7 +2,6 @@ package com.jojostudio.recipe.security.services;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.jojostudio.recipe.entities.User;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -13,7 +12,6 @@ import java.util.Objects;
 import java.util.stream.Collectors;
 
 @Getter
-//@AllArgsConstructor
 public class UserDetailsImpl implements UserDetails {
   private static final long serialVersionUID = 1L;
 

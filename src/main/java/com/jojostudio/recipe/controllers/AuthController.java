@@ -11,7 +11,6 @@ import com.jojostudio.recipe.repositories.RoleRepository;
 import com.jojostudio.recipe.repositories.UserRepository;
 import com.jojostudio.recipe.security.jwt.JwtUtils;
 import com.jojostudio.recipe.security.services.UserDetailsImpl;
-import com.jojostudio.recipe.utils.CryptoUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;

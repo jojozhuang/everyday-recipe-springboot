@@ -7,7 +7,7 @@ import org.springframework.util.StringUtils;
 import java.net.URI;
 import java.net.URISyntaxException;
 
-//@Configuration
+@Configuration
 public class MainConfig {
   @Bean
   public BasicDataSource dataSource() throws URISyntaxException {
